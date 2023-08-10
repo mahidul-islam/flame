@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:pong/first.dart';
+import 'package:pong/pixel/first.dart';
 
 void main() {
   runApp(const MyApp());
@@ -28,24 +28,25 @@ class HomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: Center(
-        child: SingleChildScrollView(
-          child: Column(
-            children: [
-              MaterialButton(
-                onPressed: () {
-                  Navigator.of(context)
-                      .push(MaterialPageRoute(builder: (BuildContext ctx) {
-                    return const FirstFlame();
-                  }));
-                },
-                child: const Text('First Game'),
-              ),
-            ],
-          ),
-        ),
-      ),
-    );
+    return const FirstFlame();
+    // return Scaffold(
+    //   body: Center(
+    //     child: SingleChildScrollView(
+    //       child: Column(
+    //         children: [
+    //           MaterialButton(
+    //             onPressed: () {
+    //               Navigator.of(context)
+    //                   .push(MaterialPageRoute(builder: (BuildContext ctx) {
+    //                 return const FirstFlame();
+    //               }));
+    //             },
+    //             child: const Text('First Game'),
+    //           ),
+    //         ],
+    //       ),
+    //     ),
+    //   ),
+    // );
   }
 }
