@@ -6,10 +6,10 @@ import 'package:pong/pixel/characters/player.dart';
 
 class Level extends World {
   late TiledComponent level;
-  late Player player;
+  Player player;
 
   String name;
-  Level({required this.name});
+  Level({required this.name, required this.player});
 
   @override
   FutureOr<void> onLoad() async {
@@ -23,10 +23,9 @@ class Level extends World {
             spawnPointsLayer?.objects[i].y ?? 0);
       }
     }
-    player = Player(
-      character: 'Virtual Guy',
-      initPosition: playerPosition,
-    );
+    if (playerPosition != null) {
+      player.position = playerPosition;
+    }
     addAll([level, player]);
     return super.onLoad();
   }
