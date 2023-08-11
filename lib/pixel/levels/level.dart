@@ -11,7 +11,19 @@ class Level extends World {
   @override
   FutureOr<void> onLoad() async {
     level = await TiledComponent.load('level01.tmx', Vector2.all(16));
-    player = Player(character: 'Virtual Guy');
+    final ObjectGroup? spawnPointsLayer =
+        level.tileMap.getLayer<ObjectGroup>('SpawnPoints');
+    Vector2? playerPosition;
+    for (int i = 0; i < (spawnPointsLayer?.objects.length ?? 0); i++) {
+      if (spawnPointsLayer?.objects[i].class_ == 'Player') {
+        playerPosition = Vector2(spawnPointsLayer?.objects[i].x ?? 0,
+            spawnPointsLayer?.objects[i].y ?? 0);
+      }
+    }
+    player = Player(
+      character: 'Virtual Guy',
+      initPosition: playerPosition,
+    );
     addAll([level, player]);
 
     return super.onLoad();
