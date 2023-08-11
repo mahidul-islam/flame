@@ -8,9 +8,12 @@ class Level extends World {
   late TiledComponent level;
   late Player player;
 
+  String name;
+  Level({required this.name});
+
   @override
   FutureOr<void> onLoad() async {
-    level = await TiledComponent.load('level01.tmx', Vector2.all(16));
+    level = await TiledComponent.load('$name.tmx', Vector2.all(16));
     final ObjectGroup? spawnPointsLayer =
         level.tileMap.getLayer<ObjectGroup>('SpawnPoints');
     Vector2? playerPosition;
@@ -25,7 +28,6 @@ class Level extends World {
       initPosition: playerPosition,
     );
     addAll([level, player]);
-
     return super.onLoad();
   }
 }

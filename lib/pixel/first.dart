@@ -24,7 +24,7 @@ class Pixel extends FlameGame {
   @override
   FutureOr<void> onLoad() {
     images.loadAllImages();
-    level = Level();
+    level = Level(name: 'level02');
     cam = CameraComponent.withFixedResolution(
         world: level, width: 640, height: 360);
     cam.viewfinder.anchor = Anchor.topLeft;
