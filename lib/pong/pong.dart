@@ -95,7 +95,7 @@ class Paddle extends RectangleComponent with CollisionCallbacks {
   }
 }
 
-class Ball extends CircleComponent with CollisionCallbacks {
+class Ball extends CircleComponent with CollisionCallbacks, HasGameRef<Pong> {
   Ball({super.radius, super.position, required this.boardSize})
       : super(anchor: Anchor.center);
   final double speed = 200;
@@ -106,6 +106,10 @@ class Ball extends CircleComponent with CollisionCallbacks {
   @override
   void onCollisionStart(
       Set<Vector2> intersectionPoints, PositionComponent other) {
+    for (final i in intersectionPoints) {
+      print(i);
+    }
+    print(other.position);
     movement.x = -movement.x;
     super.onCollisionStart(intersectionPoints, other);
   }
