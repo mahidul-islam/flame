@@ -16,7 +16,8 @@ class FirstFlame extends StatelessWidget {
   Widget build(BuildContext context) {
     Flame.device.fullScreen();
     Flame.device.setLandscape();
-    return GameWidget(game: Pixel());
+    Pixel pixel = Pixel();
+    return GameWidget<Pixel>(game: pixel);
   }
 }
 

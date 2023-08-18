@@ -4,7 +4,7 @@ import 'dart:async';
 
 import 'package:flame/components.dart';
 import 'package:flutter/services.dart';
-import 'package:pong/pixel/first.dart';
+import 'package:pong/pixel/pixel.dart';
 
 enum PlayerStates { Idle, Run }
 
