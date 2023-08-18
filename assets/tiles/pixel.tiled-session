@@ -3,8 +3,9 @@
         "height": 4300,
         "width": 2
     },
-    "activeFile": "",
+    "activeFile": "level02.tmx",
     "expandedProjectPaths": [
+        "."
     ],
     "fileStates": {
         "level01.tmx": {
@@ -22,9 +23,12 @@
             "scale": 1.052421875,
             "selectedLayer": 1,
             "viewCenter": {
-                "x": 320.68888723925465,
-                "y": 184.81181797936307
+                "x": 206.66617177640856,
+                "y": 89.79288842699128
             }
+        },
+        "pixel.tsx": {
+            "scaleInDock": 1
         }
     },
     "last.imagePath": "/Volumes/code/flutter/pong/assets/images/Terrain",
@@ -34,9 +38,13 @@
     "map.tileWidth": 16,
     "map.width": 40,
     "openFiles": [
+        "level01.tmx",
+        "level02.tmx"
     ],
     "project": "pixel.tiled-project",
     "recentFiles": [
+        "level01.tmx",
+        "level02.tmx"
     ],
     "tileset.lastUsedFormat": "tsx",
     "tileset.tileSize": {
