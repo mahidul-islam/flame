@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:pong/pixel/pixel.dart';
 import 'package:pong/pong/pong.dart';
 
 void main() {
@@ -28,35 +29,37 @@ class HomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const PongFlame();
-    // return Scaffold(
-    //   body: Center(
-    //     child: SingleChildScrollView(
-    //       child: Column(
-    //         children: [
-    //           MaterialButton(
-    //             onPressed: () {
-    //               Navigator.of(context)
-    //                   .push(MaterialPageRoute(builder: (BuildContext ctx) {
-    //                 return const FirstFlame();
-    //               }));
-    //             },
-    //             child: const Text('Pixel Game'),
-    //           ),
-    //           const SizedBox(height: 20),
-    //           MaterialButton(
-    //             onPressed: () {
-    //               Navigator.of(context)
-    //                   .push(MaterialPageRoute(builder: (BuildContext ctx) {
-    //                 return const PongFlame();
-    //               }));
-    //             },
-    //             child: const Text('Pong Game'),
-    //           ),
-    //         ],
-    //       ),
-    //     ),
-    //   ),
-    // );
+    // return const PongFlame();
+    return Scaffold(
+      body: Center(
+        child: SingleChildScrollView(
+          child: Column(
+            children: [
+              MaterialButton(
+                color: Colors.greenAccent,
+                onPressed: () {
+                  Navigator.of(context)
+                      .push(MaterialPageRoute(builder: (BuildContext ctx) {
+                    return const PixelFlame();
+                  }));
+                },
+                child: const Text('Pixel Game'),
+              ),
+              const SizedBox(height: 20),
+              MaterialButton(
+                color: Colors.amberAccent,
+                onPressed: () {
+                  Navigator.of(context)
+                      .push(MaterialPageRoute(builder: (BuildContext ctx) {
+                    return const PongFlame();
+                  }));
+                },
+                child: const Text('Pong Game'),
+              ),
+            ],
+          ),
+        ),
+      ),
+    );
   }
 }

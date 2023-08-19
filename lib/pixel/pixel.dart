@@ -9,8 +9,8 @@ import 'package:flutter/material.dart';
 import 'package:pong/pixel/characters/player.dart';
 import 'package:pong/pixel/levels/level.dart';
 
-class FirstFlame extends StatelessWidget {
-  const FirstFlame({super.key});
+class PixelFlame extends StatelessWidget {
+  const PixelFlame({super.key});
 
   @override
   Widget build(BuildContext context) {
