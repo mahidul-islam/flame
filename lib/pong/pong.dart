@@ -32,8 +32,8 @@ class Pong extends FlameGame
 
   @override
   FutureOr<void> onLoad() {
-    leftPaddle = Paddle(size: Vector2(5, 50), position: Vector2(40, 180));
-    rightPaddle = Paddle(size: Vector2(5, 50), position: Vector2(600, 180));
+    leftPaddle = Paddle(size: Vector2(5, 50), position: Vector2(30, 180));
+    rightPaddle = Paddle(size: Vector2(5, 50), position: Vector2(610, 180));
     ball = Ball(
       radius: 10,
       position: Vector2(320, 180),
